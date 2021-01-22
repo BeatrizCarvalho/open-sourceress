@@ -5,7 +5,8 @@ import Layout from "../components/Layout"
 import SEO from "../components/seo"
 
 const AboutPage = () => (
-  <>
+  <Layout>
+    <SEO title="About" />
     <h1>About Page</h1>
     <ul>
       <li>
@@ -22,7 +23,7 @@ const AboutPage = () => (
         </Link>
       </li>
     </ul>
-  </>
+  </Layout>
 )
 
 export default AboutPage

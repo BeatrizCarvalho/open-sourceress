@@ -1,3 +1,7 @@
+require("dotenv").config()
+
+const queries = require("./src/utils/algolia_queries")
+
 module.exports = {
   siteMetadata: {
     title: `My blog`,
@@ -56,9 +60,13 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: `gatsby-plugin-algolia-search`,
       options: {
-        name: `gatsby-starter-default`,
+        appId: process.env.GATSBY_ALGOLIA_APP_ID,
+        apiKey: process.env.ALGOLIA_ADMIN_KEY,
+        indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME,
+        queries,
+        short_name: `starter`,
         short_name: `starter`,
         start_url: `/`,
         background_color: `#663399`,
