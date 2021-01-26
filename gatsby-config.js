@@ -66,7 +66,14 @@ module.exports = {
         apiKey: process.env.ALGOLIA_ADMIN_KEY,
         indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME,
         queries,
-        short_name: `starter`,
+        chunkSize: 10000, // default: 1000
+        enablePartialUpdates: true,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
         background_color: `#663399`,
