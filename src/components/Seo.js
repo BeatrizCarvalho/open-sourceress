@@ -30,7 +30,7 @@ function SEO({ description, lang, meta, title, image }) {
   const defaultTitle = site.siteMetadata?.title
 
   const url = site.siteMetadata.siteUrl
-  const ogImage = `${url}${image || "/assets/img/cover.png"}`
+  const ogImage = `${url}${image || "/assets/img/opensourceress.png"}`
 
   return (
     <Helmet
@@ -70,7 +70,7 @@ function SEO({ description, lang, meta, title, image }) {
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata?.author || ``,
+          content: site.siteMetadata.author || ``,
         },
         {
           name: `twitter:title`,

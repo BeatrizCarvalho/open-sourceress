@@ -7,7 +7,7 @@ module.exports = {
     title: `Open Sourceress`,
     position: `Kernel Linux e outras mágicas`,
     description: `Blog sobre a minha caminhada no universo do Linux kernel e afins`,
-    author: `@myblog`,
+    author: `@beatrizcarvalho`,
     siteUrl: `https://opensourceress.netlify.app/`,
   },
   plugins: [
@@ -20,13 +20,6 @@ module.exports = {
       options: {
         name: `uploads`,
         path: `${__dirname}/static/assets/img`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
       },
     },
     {
@@ -75,13 +68,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `John Doe`,
-        short_name: `John Doe`,
+        name: `Open Sourceress`,
+        short_name: `Open Sourceress`,
         start_url: `/`,
         background_color: `#16202c`,
         theme_color: `#16202c`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `static/assets/img/opensourceress.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-sitemap`,
