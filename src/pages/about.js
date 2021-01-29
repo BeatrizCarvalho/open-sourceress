@@ -45,7 +45,7 @@ const AboutPage = () => (
       <h2>Contato</h2>
 
       <p>
-        Se tiveres interesse em colabora com o blog ou quiseres entrar em
+        Se tiveres interesse em colaborar com o blog ou quiseres entrar em
         contato comigo, fique a vontade. Você pode entrar em contato comigo
         através de qualquer uma das minhas redes sociais.
       </p>
