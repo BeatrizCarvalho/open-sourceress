@@ -1,16 +1,17 @@
-import React from 'react'
+import React from "react"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
-import links from './content'
-import getThemeColor from '../../utils/getThemeColor'
+import links from "./content"
+import getThemeColor from "../../utils/getThemeColor"
 
-import * as S from './styled'
+import * as S from "./styled"
 
 const MenuLinks = () => (
   <S.MenuLinksWrapper>
     <S.MenuLinksList>
       {links.map((link, i) => (
         <S.MenuLinksItem key={i}>
-          <S.MenuLinksLink
+          <AniLink
             cover
             direction="left"
             bg={getThemeColor()}
@@ -19,7 +20,7 @@ const MenuLinks = () => (
             activeClassName="active"
           >
             {link.label}
-          </S.MenuLinksLink>
+          </AniLink>
         </S.MenuLinksItem>
       ))}
     </S.MenuLinksList>
