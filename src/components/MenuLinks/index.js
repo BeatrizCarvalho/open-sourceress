@@ -6,7 +6,7 @@ import getThemeColor from "../../utils/getThemeColor"
 
 import * as S from "./styled"
 
-const MenuLinks = () => (
+const MenuLinks = ({ setIsMenuOpen, isMenuOpen }) => (
   <S.MenuLinksWrapper>
     <S.MenuLinksList>
       {links.map((link, i) => (
@@ -18,6 +18,7 @@ const MenuLinks = () => (
             duration={0.6}
             to={link.url}
             activeClassName="active"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {link.label}
           </AniLink>
