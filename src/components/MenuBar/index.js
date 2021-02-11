@@ -11,6 +11,7 @@ import { Menu } from "@styled-icons/boxicons-regular/Menu"
 import getThemeColor from "../../utils/getThemeColor"
 
 import * as S from "./styled"
+import * as GA from "./trackers"
 
 const MenuBar = ({ setIsMenuOpen, isMenuOpen }) => {
   const [theme, setTheme] = useState(null)
@@ -19,6 +20,10 @@ const MenuBar = ({ setIsMenuOpen, isMenuOpen }) => {
   const isDarkMode = theme === "dark"
   const isListMode = display === "list"
 
+  if (theme !== null) {
+    GA.themeTracker(theme)
+  }
+
   useEffect(() => {
     setTheme(window.__theme)
     setDisplay(window.__display)
@@ -26,6 +31,11 @@ const MenuBar = ({ setIsMenuOpen, isMenuOpen }) => {
     window.__onThemeChange = () => setTheme(window.__theme)
     window.__onDisplayChange = () => setDisplay(window.__display)
   }, [])
+
+  const openMenu = () => {
+    GA.menuTracker()
+    setIsMenuOpen(!isMenuOpen)
+  }
 
   return (
     <S.MenuBarWrapper>
@@ -37,6 +47,7 @@ const MenuBar = ({ setIsMenuOpen, isMenuOpen }) => {
           bg={getThemeColor()}
           duration={0.6}
           title="Voltar para Home"
+          activeClassName="active"
         >
           <S.MenuBarItem>
             <Home />
@@ -52,7 +63,7 @@ const MenuBar = ({ setIsMenuOpen, isMenuOpen }) => {
           title="Pesquisar"
           activeClassName="active"
         >
-          <S.MenuBarItem>
+          <S.MenuBarItem onClick={() => GA.searchClickTrack()}>
             <Search />
           </S.MenuBarItem>
         </S.MenuBarLink>
@@ -60,10 +71,7 @@ const MenuBar = ({ setIsMenuOpen, isMenuOpen }) => {
 
       <S.MenuBarGroupMobile>
         <S.MenuBarGroup>
-          <S.MenuBarItem
-            title="Abrir Menu"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
+          <S.MenuBarItem title="Abrir Menu" onClick={openMenu}>
             <Menu />
           </S.MenuBarItem>
         </S.MenuBarGroup>
@@ -82,6 +90,7 @@ const MenuBar = ({ setIsMenuOpen, isMenuOpen }) => {
         <S.MenuBarItem
           title="Mudar visualização"
           onClick={() => {
+            GA.displayClickTrack()
             window.__setPreferredDisplay(isListMode ? "grid" : "list")
           }}
           className="display"
@@ -91,6 +100,7 @@ const MenuBar = ({ setIsMenuOpen, isMenuOpen }) => {
         <S.MenuBarItem
           title="Ir para o Topo"
           onClick={() => {
+            GA.topClickTrack()
             window.scroll({ top: 0, behavior: "smooth" })
           }}
         >
