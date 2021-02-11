@@ -8,9 +8,18 @@ module.exports = {
     position: `Kernel Linux e outras mágicas`,
     description: `Blog sobre a minha caminhada no universo do Linux kernel e afins`,
     author: `@beatrizcarvalho`,
-    siteUrl: `https://opensourceress.netlify.app/`,
+    siteUrl: `https://open-sourceress.com/`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GOOGLE_ANALYTICS_ID,
+        head: false,
+        anonymize: true,
+        respectDNT: true,
+      },
+    },
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
@@ -42,6 +51,9 @@ module.exports = {
           {
             resolve: "gatsby-remark-images",
             options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
               maxWidth: 960,
               linkImagesToOriginal: false,
             },
@@ -71,8 +83,8 @@ module.exports = {
         name: `Open Sourceress`,
         short_name: `Open Sourceress`,
         start_url: `/`,
-        background_color: `#16202c`,
-        theme_color: `#16202c`,
+        background_color: `#1C2938`,
+        theme_color: `#1C2938`,
         display: `minimal-ui`,
         icon: `static/assets/img/opensourceress.png`, // This path is relative to the root of the site.
       },
