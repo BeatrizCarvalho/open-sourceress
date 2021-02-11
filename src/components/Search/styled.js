@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import media from "styled-media-query"
+import { Algolia } from "@styled-icons/fa-brands/Algolia"
 
 export const SearchWrapper = styled.section`
   background: var(--background);
@@ -48,7 +49,6 @@ export const SearchWrapper = styled.section`
     }
   }
 
-
   .ais-SearchBox-input {
     background: none;
     border: none;
@@ -66,4 +66,21 @@ export const SearchWrapper = styled.section`
   .ais-SearchBox-reset {
     display: none;
   }
+`
+export const SearchTitle = styled.h1`
+  color: var(--texts);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 3rem 2rem;
+  text-align: right;
+  ${media.lessThan("large")`
+    padding: 1rem;
+    line-height: 1.1;
+  `}
+`
+
+export const AlgoliaIcon = styled(Algolia)`
+  height: 1.2rem;
+  margin-left: 0.5rem;
+  width: 1.2rem;
 `

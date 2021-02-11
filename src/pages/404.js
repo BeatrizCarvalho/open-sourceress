@@ -66,7 +66,7 @@ const NotFoundPage = () => (
     <GlobalStyles />
     <Title>404</Title>
     <Text>Não tenho essa poção no meu estoque, mas...</Text>
-    <Button to="/">Vamos começar do começo?</Button>
+    <Button to="/">...e se a gente começar do começo?</Button>
   </Container>
 )
 

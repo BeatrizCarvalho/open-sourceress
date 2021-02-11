@@ -6,12 +6,13 @@ import { UpArrowAlt as Arrow } from "@styled-icons/boxicons-regular/UpArrowAlt"
 import { Bulb as Light } from "@styled-icons/boxicons-regular/Bulb"
 import { Grid } from "@styled-icons/boxicons-solid/Grid"
 import { ThList as List } from "@styled-icons/typicons/ThList"
+import { Menu } from "@styled-icons/boxicons-regular/Menu"
 
 import getThemeColor from "../../utils/getThemeColor"
 
 import * as S from "./styled"
 
-const MenuBar = () => {
+const MenuBar = ({ setIsMenuOpen, isMenuOpen }) => {
   const [theme, setTheme] = useState(null)
   const [display, setDisplay] = useState(null)
 
@@ -41,6 +42,7 @@ const MenuBar = () => {
             <Home />
           </S.MenuBarItem>
         </S.MenuBarLink>
+
         <S.MenuBarLink
           to="/search/"
           cover
@@ -48,12 +50,25 @@ const MenuBar = () => {
           bg={getThemeColor()}
           duration={0.6}
           title="Pesquisar"
+          activeClassName="active"
         >
           <S.MenuBarItem>
             <Search />
           </S.MenuBarItem>
         </S.MenuBarLink>
       </S.MenuBarGroup>
+
+      <S.MenuBarGroupMobile>
+        <S.MenuBarGroup>
+          <S.MenuBarItem
+            title="Abrir Menu"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <Menu />
+          </S.MenuBarItem>
+        </S.MenuBarGroup>
+      </S.MenuBarGroupMobile>
+
       <S.MenuBarGroup>
         <S.MenuBarItem
           title="Mudar o tema"
