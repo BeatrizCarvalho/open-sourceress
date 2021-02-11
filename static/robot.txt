@@ -1,1 +1,6 @@
+# robotstxt.org/
+
 User-agent: *
+
+Allow: /
+Disallow: /404

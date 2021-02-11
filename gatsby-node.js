@@ -34,7 +34,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     })
   }
 }
-
+// To create the posts pages
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
   return graphql(`
@@ -75,6 +75,11 @@ exports.createPages = ({ graphql, actions }) => {
       }
     }
   `).then(result => {
+    if (result.errors) {
+      throw result.errors
+    }
+
+    // Create blog posts pages.
     const posts = result.data.allMarkdownRemark.edges
 
     posts.forEach(({ node, next, previous }) => {
@@ -85,12 +90,14 @@ exports.createPages = ({ graphql, actions }) => {
           // Data passed to context is available
           // in page queries as GraphQL variables.
           slug: node.fields.slug,
+          // the order is different here because of the DESC order
           previousPost: next,
           nextPost: previous,
         },
       })
     })
 
+    // Create blog post list pages
     const postsPerPage = 6
     const numPages = Math.ceil(posts.length / postsPerPage)
 

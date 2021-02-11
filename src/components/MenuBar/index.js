@@ -1,22 +1,22 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from "react"
 
-import { Home } from '@styled-icons/boxicons-solid/Home'
-import { SearchAlt2 as Search } from '@styled-icons/boxicons-regular/SearchAlt2'
-import { UpArrowAlt as Arrow } from '@styled-icons/boxicons-regular/UpArrowAlt'
-import { Bulb as Light } from '@styled-icons/boxicons-regular/Bulb'
-import { Grid } from '@styled-icons/boxicons-solid/Grid'
-import { ThList as List } from '@styled-icons/typicons/ThList'
+import { Home } from "@styled-icons/boxicons-solid/Home"
+import { SearchAlt2 as Search } from "@styled-icons/boxicons-regular/SearchAlt2"
+import { UpArrowAlt as Arrow } from "@styled-icons/boxicons-regular/UpArrowAlt"
+import { Bulb as Light } from "@styled-icons/boxicons-regular/Bulb"
+import { Grid } from "@styled-icons/boxicons-solid/Grid"
+import { ThList as List } from "@styled-icons/typicons/ThList"
 
-import getThemeColor from '../../utils/getThemeColor'
+import getThemeColor from "../../utils/getThemeColor"
 
-import * as S from './styled'
+import * as S from "./styled"
 
 const MenuBar = () => {
   const [theme, setTheme] = useState(null)
   const [display, setDisplay] = useState(null)
 
-  const isDarkMode = theme === 'dark'
-  const isListMode = display === 'list'
+  const isDarkMode = theme === "dark"
+  const isListMode = display === "list"
 
   useEffect(() => {
     setTheme(window.__theme)
@@ -58,7 +58,7 @@ const MenuBar = () => {
         <S.MenuBarItem
           title="Mudar o tema"
           onClick={() => {
-            window.__setPreferredTheme(isDarkMode ? 'light' : 'dark')
+            window.__setPreferredTheme(isDarkMode ? "light" : "dark")
           }}
           className={theme}
         >
@@ -67,13 +67,18 @@ const MenuBar = () => {
         <S.MenuBarItem
           title="Mudar visualização"
           onClick={() => {
-            window.__setPreferredDisplay(isListMode ? 'grid' : 'list')
+            window.__setPreferredDisplay(isListMode ? "grid" : "list")
           }}
           className="display"
         >
           {isListMode ? <Grid /> : <List />}
         </S.MenuBarItem>
-        <S.MenuBarItem title="Ir para o Topo">
+        <S.MenuBarItem
+          title="Ir para o Topo"
+          onClick={() => {
+            window.scroll({ top: 0, behavior: "smooth" })
+          }}
+        >
           <Arrow />
         </S.MenuBarItem>
       </S.MenuBarGroup>
