@@ -8,7 +8,7 @@ twitter_text: Como foi concluir a primeira parte da saga criando o blog com Gats
 category: misc
 background: "#7AAB13"
 ---
-> # Olá, como estás?
+# Olá, como estás?
 
 Em 2019, quando eu comecei a saga de desenvolvimento do blog como eu já contei aqui no [Primeiro Post do blog!](https://open-sourceress.com/primeiro-post/), eu pedi ajuda pra Ana Rute, pois estava perdidaça nesse mundo de frontend, desenvolvimento de blog, git pages, essas coisas. Ela primeiramente comentou do jekyll, eu já havia tentado usar, mas não havia entendi como funcionava a estrutura, Daí depois de uma ligação, ela me passou o link dos starters do gatsby, nossa achei incrível os exemplos, fiquei horas escolhendo um template, até que decidi por um (não, não é esse que estou usando agora :P), e então começou a saga de colocar o blog no ar (sim, eu sei estou devendo este post, mas prometo que vou manter a constância de postagem e cumprir com as minhas promessas :P). 
 
