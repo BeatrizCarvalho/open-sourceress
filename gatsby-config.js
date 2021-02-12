@@ -83,7 +83,7 @@ module.exports = {
         background_color: `#1C2938`,
         theme_color: `#1C2938`,
         display: `minimal-ui`,
-        icon: `static/assets/img/opensourceress.png`, // This path is relative to the root of the site.
+        icon: `static/assets/img/claudiaOpenSourceress.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-sitemap`,

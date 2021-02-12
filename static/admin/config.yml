@@ -1,12 +1,15 @@
 backend:
   name: github
-  repo: BeatrizCarvalho/my-blog2
-  branch: dev
-  site_domain: opensourceress.netlify.app
+  repo: BeatrizCarvalho/open-sourceress
+  branch: master
+  site_domain: open-sourceress.com
 
 publish_mode: editorial_workflow
 media_folder: "static/assets/img"
 public_folder: "assets/img"
+slug:
+  encoding: "ascii"
+  clean_accents: true
 
 collections:
   - name: "posts" # Used in routes, e.g., /admin/collections/blog
@@ -23,12 +26,14 @@ collections:
           widget: "datetime",
           format: "YYYY-MM-DD hh:mm:ss",
         }
-      - { label: "image", name: "thumbnail", widget: "image" }
+      - { label: "Post Image", name: "thumbnail", widget: "image" }
+      - { label: "Introduction", name: "introduction", widget: "string" }
+      - { label: "Twitter text", name: "twitter_text", widget: "string" }
       - {
           label: "Category",
           name: "category",
           widget: "select",
-          options: ["jekyll", "css", "js", "html", "svg", "dev", "misc"],
+          options: ["misc", "Linux Kernel", "Gatsby", "JS"],
         }
       - {
           label: "Background",
@@ -36,8 +41,8 @@ collections:
           widget: "select",
           options:
             [
-              { label: "Jekyll", value: "#B31917" },
-              { label: "CSS", value: "#2DA0C3" },
+              { label: "Linux Kernel", value: "#B31917" },
+              { label: "Gatsby", value: "#2DA0C3" },
               { label: "JS", value: "#D6BA32" },
               { label: "HTML", value: "#EB7728" },
               { label: "SVG", value: "#7D669E" },
