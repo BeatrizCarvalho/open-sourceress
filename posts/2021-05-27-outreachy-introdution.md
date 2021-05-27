@@ -48,7 +48,7 @@ And finally, a value I am learning is the responsibility to work on a project as
 
 During my graduation, I attended several events about open source software, for example, tcheLinux, FISL. I always wished to contribute to the community but finding compatible materials/tutorials for beginners was really hard, mostly because despite being considered for beginners, it always required previous knowledge that were beyond my current skills.  
 
-Then on 2019 I took part in [LKCamp]<https://lkcamp.gitlab.io/> group (Linux Kernel study group-),  where I learned more about Linux Kernel, step-by-step on how to contribute to the community, and on how we could contribute with Open Source Software through internship programs such as Google Summer of Code (GSoC) and Outreachy. By the time, I got really excited about it but couldn't participate on the second stage of selection.  
+Then on 2019 I took part in [LKCamp](https://lkcamp.gitlab.io/) (Linux Kernel study group),  where I learned more about Linux Kernel, step-by-step on how to contribute to the community, and on how we could contribute with Open Source Software through internship programs such as Google Summer of Code (GSoC) and Outreachy. By the time, I got really excited about it but couldn't participate on the second stage of selection.  
 
 So, this year I gave my best at the selection process, made some patches and wrote my intern plan together with my mentors. And now that I was selected to Outreachy program, I can't believe that I have got this opportunity to be a part of it! 
 
