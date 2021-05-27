@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@ant-design/icons": "^4.6.2",
     "algoliasearch": "^4.8.4",
     "dotenv": "^8.2.0",
     "gatsby": "^2.32.3",
