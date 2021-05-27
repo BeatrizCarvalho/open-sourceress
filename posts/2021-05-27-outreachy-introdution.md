@@ -1,5 +1,5 @@
 ---
-title: Outreachy - Introdution
+title: Outreachy - Introduction
 description: " #outreachy #kernel #linux #drm #vkms"
 date: 2021-05-24 10:00:19
 thumbnail: assets/img/poster-applicants-usletter_page-0001.jpg
