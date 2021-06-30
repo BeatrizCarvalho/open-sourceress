@@ -16,9 +16,9 @@ Today my week’s blog will be focusing on the Linux Kernel Community at which I
 
 ## What is Linux Kernel?
 
-A small context: the core of an Operating System (OS) is the \emph{Kernel}, as this is responsible for the integration of the physical devices (\textit{hardware}) of the computer with the programs (\textit{software}) . In a Linux OS this core is also known as \textit{Kernel Linux}, has open source code, and is freely available for the community,  how I said in my introduction blog https://open-sourceress.com/outreachy-introduction/, the community it's a set of people and companies that want to collaborate in the development of the system.  
+A small context: the core of an Operating System (OS) is the **Kernel**, as this is responsible for the integration of the physical devices (hardware) of the computer with the programs (software). In a Linux OS this core is also known as **Linux Kernel**, has open source code, and is freely available for the community,  how I said in my introduction blog https://open-sourceress.com/outreachy-introduction/, the community it's a set of people and companies that want to collaborate in the development of the system.  
 
-Due to these contributions \textit{Kernel Linux} has grown a lot, with over 8 million lines of code and well over 1000 contributors to each release, is one of the largest and most active free software projects in existence.  The kernel codebase has been logically broken down into a set of subsystems: network, architecture-specific support (x86, ARM, MIPS, ...), memory management, devices video, real-time systems, among others. This makes it a little easier to manage the contributions made in the Kernel, as most subsystems have a designated maintainer, and they handle verifying and accepting contributions before they are incorporated in \textit{Linux kernel mainline} 
+Due to these contributions Linux Kernel has grown a lot, with over 8 million lines of code and well over 1000 contributors to each release, is one of the largest and most active free software projects in existence.  The kernel codebase has been logically broken down into a set of subsystems: network, architecture-specific support (x86, ARM, MIPS, ...), memory management, devices video, real-time systems, among others. This makes it a little easier to manage the contributions made in the Kernel, as most subsystems have a designated maintainer, and they handle verifying and accepting contributions before they are incorporated in *Linux kernel mainline* 
 
 About my project at Linux Kernel – “Improvements to DRI-devel (aka kernel GPU subsystem)“ 
 
@@ -34,7 +34,7 @@ But yes, I know well, that starting to contribute to the kernel is scary, especi
 
 But there are several things and initiatives to help, for example: 
 
-### Internet courses and materials: 
+### Internet courses and materials:
 
 [A  beginners guide to linux kernel development](https://training.linuxfoundation.org/training/a-beginners-guide-to-linux-kernel-development-lfd103/)
 
@@ -44,8 +44,7 @@ But there are several things and initiatives to help, for example:
 
 [Write and Submit your first Linux kernel Patch](https://www.youtube.com/watch?v=LLBrBBImJt4) 
 
-
-### Internship programs: 
+### Internship programs:
 
 [Outreachy](https://www.outreachy.org/)
 
@@ -55,7 +54,7 @@ Outreachy is a paid, remote internship program. Outreachy's goal is to support p
 
 Google Summer of Code is a global program focused on bringing more student developers into open source software development. Students work with an open source organization on a 10 week programming project during their break from school. 
 
-### Study groups: 
+### Study groups:
 
 In Brazil, I met 2 of these groups 
 
