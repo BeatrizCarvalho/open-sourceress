@@ -37,7 +37,7 @@ I would like to continue working with the Linux Kernel, and I also really like E
 
 You know... I have a lot of difficulty answering this question because I always think I don't have many skills, but I'll do my best!!!  
 
-During my Outreachy internship, I Created vkms_config_show(), the function which aims to print the data in drm_debugfs_create_files(), I also started to learn how to debug the code. I already worked a little with the Coccinelle tool. And as I mentioned earlier, I've already used Raspberry, Beagle Bone, and Arduino.  
+During my Outreachy internship, I Created vkms\_config\_show(), the function which aims to print the data in drm\_debugfs\_create\_files(), I also started to learn how to debug the code. I already worked a little with the Coccinelle tool. And as I mentioned earlier, I've already used Raspberry, Beagle Bone, and Arduino.  
 
 ## What languages do you speak, and at what school grade level? 
 
